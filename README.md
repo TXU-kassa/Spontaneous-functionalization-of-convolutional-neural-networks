@@ -1,24 +1,24 @@
-# 自发功能化的卷积神经网络项目
+# Spontaneously functionalized convolutional neural network project
 
-本项目旨在研究卷积神经网络（CNN）在多任务学习环境中能否自发形成专门的功能区域，类似于人脑的面孔区域（Fusiform Face Area, FFA）。通过训练和损伤实验，我们探讨了 VGG16、VGG19、ResNet50 和 ResNeXt50 模型在同时进行人脸和非人脸图像识别任务时的表现。
+This project aims to investigate whether convolutional neural networks (CNNs) can spontaneously form specialized functional areas in a multi-task learning environment, similar to the fusiform face area (FFA) of the human brain. Through training and lesion experiments, we explored the performance of VGG16, VGG19, ResNet50, and ResNeXt50 models when performing both face and non-face image recognition tasks.
 
-## 项目结构
+## Project Structure
 
-- `vgg16.py`：使用 VGG16 模型进行图像分类任务，包括人脸和非人脸图像识别。
-- `vgg19.py`：使用 VGG19 模型，结构和功能类似于 VGG16，但增加了网络深度以提高识别能力。
-- `ResNet.py`：使用 ResNet50 模型，通过残差学习提高深度网络的训练效果。
-- `ResNeXt.py`：使用 ResNeXt50 模型，通过分组卷积的方式增强模型的表达能力和扩展性。
-- `vggface2.py`：数据处理脚本，用于准备和预处理 VGGFace2 数据集以及 CIFAR-10 数据集，以统一格式进行训练。
-- **损伤实验部分**：每个模型文件中都包含损伤实验代码，旨在评估网络特定部分（如特定卷积层）的功能化程度。
+- `vgg16.py`：A multi-task neural network was built using the VGG16 model, including face and non-face image recognition. A lesion experiment was then conducted to verify whether the network spontaneously functionalized. If the human brain also has a functional area dedicated to recognizing face images (fusiform face area).
+- `vgg19.py`：The VGG19 model is used, which has similar structure and function to VGG16, but increases the network depth to improve the recognition ability of the multi-task network. Similar lesion experiments are still conducted.
+- `ResNet.py`：The ResNet50 model is used to improve the recognition effect of the multi-task network through residual learning. And through lesion experiments, it is further verified that the ResNet model will also spontaneously show certain functionalization.
+- `ResNeXt.py`：The ResNeXt50 model is used to enhance the expressiveness and scalability of the multi-task network through group convolution. The lesion experiment is still used to verify whether the model spontaneously presents functional partitioning.
+- `vggface2.py`：Data processing scripts to prepare and preprocess the VGGFace2 dataset and the CIFAR-10 dataset for training in a unified format.
+- **Lesion Experiment Section**：Each model file contains code for impairment experiments designed to assess the functionality of specific parts of the network (e.g., a specific convolutional layer).
 
-## 数据集
+## Dataset
 
-- **VGGFace2 数据集**：一个大规模人脸识别数据集，用于训练模型识别人脸。
-- **CIFAR-10 数据集**：一个标准的图像识别数据集，包括10个类别的自然图像，如飞机、汽车、猫等。
+- **VGGFace2 Dataset**：A large-scale face recognition dataset used to train models to recognize faces.
+- **CIFAR-10 Dataset**：A standard image recognition dataset consisting of 10 categories of natural images, such as airplanes, cars, cats, etc.
 
-## 环境设置
+## Environment Setup
 
-请确保在运行代码之前，安装以下主要依赖项：
+Please make sure to install the following main dependencies before running the code:
 
 - Python 3.x
 - NumPy
@@ -30,7 +30,7 @@
 - Seaborn
 - OpenCV
 
-可以使用以下命令安装这些依赖项：
+These dependencies can be installed using the following command:
 
 ```bash
 pip install numpy torch torchvision scikit-learn pillow matplotlib seaborn opencv-python
